@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: heliumdatadestination
+    schema: wisdom
+    tables:
+      - name: hospital_visits
+      - name: patients
+      - name: doctors
+      
