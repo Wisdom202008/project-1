@@ -6,8 +6,8 @@
     '{{schema}}' as schema_name,
     doctor_id,
     doctor_name,
-    doctor_created_at
-   
+    doctor_created_at,
+    CURRENT_TIMESTAMP() as run_date
   from {{schema}}.doctors
 )
 
