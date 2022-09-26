@@ -1,9 +1,11 @@
-{% macro get_schema_name() %}
+{% macro get_schema_name(table_name) %}
 
 {% set schema_name_query %}
 select distinct
-table_schema
-from region-us.INFORMATION_SCHEMA.TABLES where table_name = 'doctors'
+table_schema,
+table_name
+from region-us.INFORMATION_SCHEMA.TABLES
+where table_name = '{{table_name}}'
 order by 1
 {% endset %}
 

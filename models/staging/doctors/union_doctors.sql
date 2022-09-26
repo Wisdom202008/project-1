@@ -1,4 +1,4 @@
-{%- set schema_names  = get_schema_name() -%}
+{%- set schema_names  = get_schema_name('doctors') -%}
 
 {% for schema in schema_names %}
 (
